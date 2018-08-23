@@ -23,7 +23,7 @@
 
 
 					<input type="text" class="form-control" name="question" placeholder="Type your question" />
-					<button class="btn btn-danger text-center" style="margin-top: 30px; width: 100%;" >Ask</button>
+					<button click="pushData()" class="btn btn-danger text-center" style="margin-top: 30px; width: 100%;" >Ask</button>
 
 				</div>
 
@@ -38,8 +38,32 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		// Set the configuration for your app
+		// TODO: Replace with your project's config object
+		var config = {
+			apiKey: "AIzaSyDnvzAIm8lDM77a-5h3yA8TbFyYHTyDVpo",
+			authDomain: "vsit-workshop.firebaseapp.com",
+			databaseURL: "https://vsit-workshop.firebaseio.com",
+			storageBucket: "bucket.appspot.com"
+		};
+		firebase.initializeApp(config);
+
+		// Get a reference to the database service
+		var database = firebase.database();
+
+		function pushData() {
+			console.log("ewrgewr");
+			database.ref('users/').push({
+				question: "wkjrndwkjn"
+			});
+		}
+	</script>
 
 </body>
 </html>
