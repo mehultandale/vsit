@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VSIT Q&A</title>
+</head>
+<body>
+
+
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<div class="container" >
+		<div class="row" >
+			<div class="col-lg-2 col-md-2" ></div>
+			<div class="col-lg-8 col-md-8" >
+
+				<div class="jumbotron" >
+					
+					<h1>VSIT Workshop</h1>
+					<p>How to build dynamic applications</p>
+
+
+					<input type="text" class="form-control" name="question" placeholder="Type your question" />
+					<button click="pushData()" class="btn btn-danger text-center" style="margin-top: 30px; width: 100%;" >Ask</button>
+
+				</div>
+
+			</div>
+			<div class="col-lg-2 col-md-2" ></div>
+		</div>
+	</div>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		// Set the configuration for your app
+		// TODO: Replace with your project's config object
+		var config = {
+			apiKey: "AIzaSyDnvzAIm8lDM77a-5h3yA8TbFyYHTyDVpo",
+			authDomain: "vsit-workshop.firebaseapp.com",
+			databaseURL: "https://vsit-workshop.firebaseio.com",
+			storageBucket: "bucket.appspot.com"
+		};
+		firebase.initializeApp(config);
+
+		// Get a reference to the database service
+		var database = firebase.database();
+
+		function pushData() {
+			console.log("ewrgewr");
+			database.ref('users/').push({
+				question: "wkjrndwkjn"
+			});
+		}
+	</script>
+
+</body>
+</html>
